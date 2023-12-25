@@ -19,4 +19,9 @@ public class UserServiceImpl implements UserService {
         log.info("Saving user: {}", user.toString());
         return this.userRepository.save(user);
     }
+
+    @Override
+    public User getUserById(Long userId) {
+        return userRepository.findById(userId).orElse(null);
+    }
 }

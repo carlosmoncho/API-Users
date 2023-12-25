@@ -4,4 +4,5 @@ import com.example.apiusers.domain.User;
 
 public interface UserService {
     User saveUser(User user);
+    User getUserById(Long userId);
 }
